@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "PowerShell(\\(Get-Command gh -ErrorAction SilentlyContinue\\).Source; \"---\"; git ls-remote https://github.com/Naman080706/upLift 2>&1 | Select-Object -First 5)",
+      "PowerShell(git ls-remote https://github.com/Naman080706/upLift; \"EXIT=$LASTEXITCODE\")",
+      "PowerShell(git config --global credential.helper)",
+      "PowerShell(git config --get-all credential.helper)",
+      "PowerShell(\"---HELPERS---\")"
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: 0 0% 3%;
+  --foreground: 0 0% 98%;
+  --primary: 1 97% 52%;       /* #FC0B0B */
+  --accent: 38 96% 54%;       /* #FAA41A */
+  --primary-foreground: 0 0% 100%;
+  --border: 0 0% 12%;
+  --ring: 1 97% 52%;
+  --radius: 0.75rem;
+
+  /* Brand palette */
+  --red: #FC0B0B;
+  --orange: #FAA41A;
+}
+
+body {
+  background-color: #080808;
+  color: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Brand gradient utility */
+.brand-gradient {
+  background: linear-gradient(135deg, #FC0B0B, #FAA41A);
+}
+
+.brand-text {
+  background: linear-gradient(135deg, #FC0B0B, #FAA41A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(252, 11, 11, 0.5), 0 0 20px rgba(250, 164, 26, 0.3);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(252, 11, 11, 0.2), 0 0 30px rgba(250, 164, 26, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Ambient brand glows */
+.glow-red {
+  box-shadow: 0 0 60px rgba(252, 11, 11, 0.15);
+}
+
+.glow-orange {
+  box-shadow: 0 0 60px rgba(250, 164, 26, 0.15);
+}
+
+/* Custom range slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #FC0B0B;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(252, 11, 11, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 18px rgba(252, 11, 11, 0.9);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #FC0B0B;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(252, 11, 11, 0.6);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(252,11,11,0.3); border-radius: 9999px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(252,11,11,0.6); }
+
